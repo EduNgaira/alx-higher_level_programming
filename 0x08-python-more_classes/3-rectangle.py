@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 # 3-rectangle.py
-"""Defines a Rectangle class."""
+"""Rectangle"""
 
 
 class Rectangle:
-	#Represent a rectangle
+    """Rectangle."""
 
     def __init__(self, width=0, height=0):
         """Initialize a new Rectangle.
@@ -17,7 +17,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Set rectangle width"""
+        """Set rectangle width."""
         return self.__width
 
     @width.setter
@@ -30,7 +30,7 @@ class Rectangle:
 
     @property
     def height(self):
-	#Set rectangle height
+        """Set rectangle height"""
         return self.__height
 
     @height.setter
@@ -42,17 +42,17 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-	#Return rectangle area
+        """Return rectangle angle"""
         return (self.__width * self.__height)
 
     def perimeter(self):
-	#Return the perimeter of the rectangle perimeter
-	if self.__width == 0 or self.__height == 0:
-        return (0)
+        """Return rectangle perimeter"""
+        if self.__width == 0 or self.__height == 0:
+            return (0)
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return rectangle representation.
+        """Return the printable representation of the Rectangle.
         Represents the rectangle with the # character.
         """
         if self.__width == 0 or self.__height == 0:
