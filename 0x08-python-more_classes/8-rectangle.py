@@ -26,7 +26,7 @@ class Rectangle:
     @property
     def width(self):
         """Set rectangle width"""
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -34,12 +34,12 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.width = value
+        self.__width = value
 
     @property
     def height(self):
-        """Sete height of the Rectangle."""
-        return self.height
+        """Set rectangle height"""
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -47,17 +47,17 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.height = value
+        self.__height = value
 
     def area(self):
-        """Return the area of the Rectangle."""
-        return (self.width * self.height)
+        """Return rectangle area"""
+        return (self.__width * self.__height)
 
     def perimeter(self):
-        """Return the perimeter of the Rectangle."""
-        if self.width == 0 or self.height == 0:
+        """Return rectangle perimeter"""
+        if self.__width == 0 or self.__height == 0:
             return (0)
-        return ((self.width * 2) + (self.height * 2))
+        return ((self.__width * 2) + (self.__height * 2))
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -80,7 +80,7 @@ class Rectangle:
         """Return the printable representation of the Rectangle.
         Represents the rectangle with the # character.
         """
-        if self.width == 0 or self.height == 0:
+        if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect = []
