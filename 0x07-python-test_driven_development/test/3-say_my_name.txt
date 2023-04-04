@@ -1,10 +1,8 @@
-# 3-say_my_name.txt
+=================================
+How to implement 3-say_my_name.py
+=================================
 
-===========================
-How to Use 3-say_my_name.py
-===========================
-
-This modules defines a function ``say_my_name(first_name, last_name="")``.
+Function defintion module ``say_my_name(first_name, last_name="")``.
 
 Usage
 =====
@@ -14,8 +12,8 @@ Usage
 ::
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
-    >>> say_my_name("Brennan", "Baraban")
-    My name is Brennan Baraban
+    >>> say_my_name("Edwin", "Ngaira")
+    My name is Edwin Ngaira
 
 ::
 
@@ -27,8 +25,8 @@ an empty string is printed instead.
 
 ::
 
-    >>> say_my_name("Brennan")
-    My name is Brennan 
+    >>> say_my_name("Edwin")
+    My name is Edwin 
 
 Invalid Names
 =============
@@ -38,19 +36,19 @@ a TypeError is raised.
 
 ::
 
-    >>> say_my_name(6, "James")
+    >>> say_my_name(4, "Peter")
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
 ::
 
-    >>> say_my_name("LeBron", ["Cavs", "Lakers", "Heat"])
+    >>> say_my_name("Messi", ["Barca", "PSG", "Leeds"])
     Traceback (most recent call last):
     TypeError: last_name must be a string
 
 ::
 
-    >>> say_my_name({"LeBron": 6, "James": 23}, 7.7)
+    >>> say_my_name({"Messi": 4, "James": 43}, 7.7)
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
@@ -60,13 +58,10 @@ a TypeError is raised.
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
-At least one name must be provided.
+A minimum of one name must be provided.
 
 ::
 
     >>> say_my_name()
     Traceback (most recent call last):
     TypeError: say_my_name() missing 1 required positional argument: 'first_name'
-
-
-+++++++++++++++++++++++++++++++++
