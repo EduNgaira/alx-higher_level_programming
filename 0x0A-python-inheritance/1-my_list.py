@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""MyList class container"""
+"""
+MyList class container
+"""
 
 
 class MyList(list):
