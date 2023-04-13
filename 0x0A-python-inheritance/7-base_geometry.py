@@ -1,18 +1,27 @@
 #!/usr/bin/python3
 """
-Function 6-base_geometry.py container
+Defines class BaseGeometry
 """
 
 
 class BaseGeometry:
-    """Public instance methods area and integer_validator class"""
+    """Base geometry."""
+
     def area(self):
-        """raises exception"""
+        """if not implemented."""
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """Shows value is greater than 0 and an integer"""
-        if type(value) is not int:
-            raise TypeError("{:s} is an integer".format(name))
+        """Validate integer parameter.
+
+        Args:
+            name (str): Parameter name
+            value (int): Parameter to validate.
+        Raises:
+            TypeError: If non-integer.
+            ValueError: If value is <= 0.
+        """
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError("{:s} is greater than 0".format(name))
+            raise ValueError("{} must be greater than 0".format(name))
